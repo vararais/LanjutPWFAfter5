@@ -1,5 +1,16 @@
-LANJUTAN MODUL 5 
+Modul 6
+User Validation
+<img width="1920" height="1080" alt="Screenshot 2026-04-11 093610" src="https://github.com/user-attachments/assets/3fe07309-f2c2-4248-b971-34df34758ed5" />
+<img width="1920" height="1080" alt="Screenshot 2026-04-11 093626" src="https://github.com/user-attachments/assets/4e2f474b-7d23-4d5c-b8af-58b7609e2dda" />
 
+---
+
+Admin Validation
+<img width="1920" height="1080" alt="Screenshot 2026-04-11 093707" src="https://github.com/user-attachments/assets/3cd78033-9993-4f24-8f70-bf829d75339d" />
+<img width="1920" height="1080" alt="Screenshot 2026-04-11 093728" src="https://github.com/user-attachments/assets/239d23c1-e9c2-4912-b7a0-a09bf43b197d" />
+
+---
+Modul 5
 Admin CRUD 
 
 <img width="1920" height="1080" alt="Screenshot 2026-04-11 090657" src="https://github.com/user-attachments/assets/0815bc7c-f750-4f3a-8b8f-b110b77018fa" />
