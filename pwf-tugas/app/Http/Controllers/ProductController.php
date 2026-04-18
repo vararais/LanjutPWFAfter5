@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 
@@ -20,18 +22,12 @@ class ProductController extends Controller
         return view('product.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        // Validasi input
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'qty' => 'required|integer',
-            'price' => 'required|numeric',
-        ]);
-
-        // Otomatis mengambil ID user yang sedang login
-        $validated['user_id'] = Auth::id(); 
+        // Otomatis tervalidasi oleh StoreProductRequest!
+        $validated = $request->validated();
         
+        $validated['user_id'] = Auth::id(); 
         Product::create($validated);
 
         return redirect()->route('product.index')->with('success', 'Product created successfully.');
@@ -53,18 +49,13 @@ class ProductController extends Controller
         return view('product.edit', compact('product'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateProductRequest $request, $id)
     {
         $product = Product::findOrFail($id);
-        
-        // Cek Policy sebelum memproses update data
         Gate::authorize('update', $product);
 
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'qty' => 'required|integer',
-            'price' => 'required|numeric',
-        ]);
+        // Otomatis tervalidasi oleh UpdateProductRequest!
+        $validated = $request->validated();
 
         $product->update($validated);
 

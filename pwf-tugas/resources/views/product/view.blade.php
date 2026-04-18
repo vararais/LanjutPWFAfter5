@@ -17,7 +17,21 @@
                     <p class="text-lg text-gray-900">Rp {{ number_format($product->price, 0, ',', '.') }}</p>
                 </div>
                 
-                <a href="{{ route('product.index') }}" class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600">Back to List</a>
+                {{-- AREA TOMBOL SEJAJAR --}}
+                <div class="flex space-x-3 mt-6">
+                    <a href="{{ route('product.index') }}" class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600">Back to List</a>
+
+                    {{-- Memanggil Component Edit & Delete. --}}
+                    {{-- Tetap dibungkus @can agar policy keamanan Modul 5 tetap jalan! --}}
+                    @can('update', $product)
+                        <x-edit-button url="{{ route('product.edit', $product->id) }}" />
+                    @endcan
+
+                    @can('delete', $product)
+                        <x-delete-button url="{{ route('product.delete', $product->id) }}" />
+                    @endcan
+                </div>
+
             </div>
         </div>
     </div>
