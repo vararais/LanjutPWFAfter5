@@ -1,3 +1,10 @@
+Modul 7
+
+CRUD pada view product
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/fa0d0ebf-7e49-4d40-ab44-6a8c1fef9d88" />
+
+---
+
 Modul 6
 User Validation
 <img width="1920" height="1080" alt="Screenshot 2026-04-11 093610" src="https://github.com/user-attachments/assets/3fe07309-f2c2-4248-b971-34df34758ed5" />
