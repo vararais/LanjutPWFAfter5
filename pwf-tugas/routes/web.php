@@ -26,6 +26,10 @@ Route::middleware('auth')->group(function () {
     Route::put('/product/update/{id}', [ProductController::class, 'update'])->name('product.update');
     Route::delete('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
 
+    Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category.index')->middleware('can:manage-category');
+    Route::get('/category/create', [App\Http\Controllers\CategoryController::class, 'create'])->name('category.create')->middleware('can:manage-category');
+    Route::post('/category', [App\Http\Controllers\CategoryController::class, 'store'])->name('category.store')->middleware('can:manage-category');
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

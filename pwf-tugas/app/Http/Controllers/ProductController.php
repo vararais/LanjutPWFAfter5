@@ -19,7 +19,8 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('product.create');
+        $categories = \App\Models\Category::all(); // Ambil semua kategori
+        return view('product.create', compact('categories'));
     }
 
     public function store(StoreProductRequest $request)
@@ -41,12 +42,10 @@ class ProductController extends Controller
 
     public function edit($id)
     {
-            $product = Product::findOrFail($id);
-            
-            // Cek Policy sebelum menampilkan halaman edit
-        Gate::authorize('update', $product); 
-
-        return view('product.edit', compact('product'));
+        $product = Product::findOrFail($id);
+        Gate::authorize('update', $product);
+        $categories = \App\Models\Category::all(); 
+        return view('product.edit', compact('product', 'categories'));
     }
 
     public function update(UpdateProductRequest $request, $id)
