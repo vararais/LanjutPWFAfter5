@@ -1,3 +1,22 @@
+UCP 1 
+
+Menambah Category (Admin bisa mengakses category)
+<img width="1920" height="1080" alt="Screenshot 2026-05-01 161005" src="https://github.com/user-attachments/assets/e4c350f7-d403-40a3-9196-e8d761e6a636" />
+<img width="1920" height="1080" alt="Screenshot 2026-05-01 160947" src="https://github.com/user-attachments/assets/eba31c37-6a74-4182-8ca3-e1e5cacd77e3" />
+<img width="1920" height="1080" alt="Screenshot 2026-05-01 161112" src="https://github.com/user-attachments/assets/f34d80da-ee1d-42b5-85c1-3bdb0235398c" />
+
+User tidak dapat mengakses category
+<img width="1920" height="1080" alt="Screenshot 2026-05-01 161300" src="https://github.com/user-attachments/assets/ede10daa-2ba5-425a-9b60-b450898351b8" />
+
+---
+
+Modul 7
+
+CRUD pada view product
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/fa0d0ebf-7e49-4d40-ab44-6a8c1fef9d88" />
+
+---
+
 Modul 6
 User Validation
 <img width="1920" height="1080" alt="Screenshot 2026-04-11 093610" src="https://github.com/user-attachments/assets/3fe07309-f2c2-4248-b971-34df34758ed5" />
